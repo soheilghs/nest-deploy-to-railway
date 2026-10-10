@@ -11,8 +11,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
 
-  //const seedService = app.get(SeedService);
-  //await seedService.seed();
+  const seedService = app.get(SeedService);
+  await seedService.seed();
 
   const config = new DocumentBuilder()
     .setTitle('Spotify Clone')
@@ -32,7 +32,7 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService);
   await app.listen(configService.get<number>('port'));
-  console.log(configService.get<string>('NODE_ENV'));
+  //console.log(configService.get<string>('NODE_ENV'));
 
   if (module.hot) {
     module.hot.accept();

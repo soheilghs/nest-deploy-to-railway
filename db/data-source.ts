@@ -5,6 +5,9 @@ import { User } from '../src/users/user.entity';
 import { Playlist } from '../src/playlists/playlist.entity';
 import { Artist } from '../src/artists/artist.entity';
 import { Song } from '../src/songs/song.entity';
+//import 'dotenv/config';
+
+require('dotenv').config();
 
 export const typeOrmAsyncConfig: TypeOrmModuleAsyncOptions = {
   imports: [ConfigModule],
