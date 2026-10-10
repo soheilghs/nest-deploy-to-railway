@@ -3,7 +3,7 @@ import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-//import { SeedService } from './seed/seed.service';
+import { SeedService } from './seed/seed.service';
 
 declare const module: any;
 
